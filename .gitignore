@@ -1,3 +1,6 @@
 .git
 __pycache__
 .vscode
+infoip.egg-info
+dist
+build

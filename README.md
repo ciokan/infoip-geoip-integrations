@@ -3,7 +3,7 @@
 This simple plugin connects to the [infoip](https://www.infoip.io) API and retrieves the geoip information for the current request/visitor.
 It works based on view decorators and not middleware to prevent slowing down your application with unnecessary data.
 
-The plugin uses an external API which is battle-tested and enterprise-ready to satisfy any number of requests. Our database is refreshed every single day in order to respond with up-to-date information. The API offers `1000` free requests every day with a rate-limiter set at `1rps` (one request per second). If you find that to be too restrictive please consider subscribing to a premium plan: [premim plans](https://www.infoip.io/pricing)
+The plugin uses an external API which is battle-tested and enterprise-ready to satisfy any number of requests. Our database is refreshed every single day in order to respond with up-to-date information. The API offers `1000` free requests every day with a rate-limiter set at `1rps` (one request per second). If you find that to be too restrictive please consider subscribing to a [premium plan](https://www.infoip.io/pricing)
 
 ### Supported frameworks
 1. Django
@@ -13,16 +13,7 @@ The plugin uses an external API which is battle-tested and enterprise-ready to s
     
     `pip install infoip`
 
-2. Add "infoip" to your INSTALLED_APPS setting like this::
-
-    ```python
-    INSTALLED_APPS = [
-        ...
-        'infoip',
-    ]
-    ```
-
-3. Import the view decorator and use it to decorate the view where you need geoip info
+2. Import the view decorator and use it to decorate the view where you need geoip info
 
     ```python
     # django test view that simply prints the geoip data regarding the visitor
@@ -40,7 +31,7 @@ The plugin uses an external API which is battle-tested and enterprise-ready to s
         return JsonResponse(request.infoip)
     ```
 
-4. Tweak the settings
+3. Tweak the settings
     1. (optional) Add your api key to your settings if you are a premium subscriber of [infoip](https://www.infoip.io)
 
         ```python
